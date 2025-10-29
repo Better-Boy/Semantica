@@ -1,5 +1,6 @@
 import React from 'react';
 import { GithubIcon } from './icons/GithubIcon';
+import logo from './icons/logo.png';
 
 interface HeaderProps {
   showTitle?: boolean;
@@ -15,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ showTitle = false, hideBorder = false }
         <div className="flex items-center">
           <div className="flex-1">
             <img 
-              src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvam9iNjgwLTE2Ni1wLWwxZGJ1cTN2LnBuZw.png" 
+              src={logo} 
               alt="Semantica Logo" 
               className="h-8 w-8" 
             />
@@ -28,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ showTitle = false, hideBorder = false }
           <div className="flex-1 flex justify-end">
             <nav className="flex items-center space-x-4 text-sm text-gray-600">
               <a 
-                href="https://github.com/mindsdb/mindsdb" 
+                href="https://github.com/Better-Boy/Semantica" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-500 hover:text-gray-900 transition-colors"

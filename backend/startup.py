@@ -2,9 +2,9 @@
 import logging
 import json
 from pathlib import Path
+import time
 from typing import Dict, Any, List
 import psycopg2
-from psycopg2 import sql
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 from config import get_config
@@ -315,7 +315,7 @@ def setup_knowledge_base() -> Dict[str, Any]:
         
         try:
             result = client.query(create_kb_query)
-            res = result.fetch()
+            _ = result.fetch()
             logger.info(f"Knowledge base '{kb_name}' created successfully")
             return {
                 "success": True,
@@ -380,8 +380,9 @@ CREATE INDEX ON KNOWLEDGE_BASE {kb_name};
 """
         
         try:
+            time.sleep(3)
             result = client.query(create_kb_index_query)
-            res = result.fetch()
+            _ = result.fetch()
             logger.info(f"Knowledge base index for '{kb_name}' created successfully")
             return {
                 "success": True,
@@ -502,9 +503,12 @@ def load_sample_data() -> Dict[str, Any]:
         
         logger.info(f"Loaded {len(data)} records from sample data file")
         
+        for rec in data:
+            rec["text"] = "\n".join([f"{key}: {value}" for key, value in rec.items()])
+
         # Insert data to PostgreSQL table
         insert_result = insert_data_to_postgres(data)
-        
+
         if insert_result.get("success"):
             logger.info(f"Data inserted to PostgreSQL: {insert_result.get('message')}")
             return {

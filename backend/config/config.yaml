@@ -8,9 +8,6 @@ app:
 
 mindsdb:
   url: "http://127.0.0.1:47334"
-  # For local MindsDB instance, use: http://127.0.0.1:47334
-  email: ""  # Set in .env file or environment variable
-  password: ""  # Set in .env file or environment variable
 
 api:
   prefix: "/api/v1"

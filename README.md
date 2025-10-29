@@ -36,6 +36,10 @@ Semantica is an intelligent academic search and chat platform that enables resea
 
 ---
 
+Demo Video - [Semantica](https://youtu.be/8wIhcXm_7nk)
+Blog post - 
+Twitter Share - 
+
 ## 🏗️ Architecture
 
 ```
