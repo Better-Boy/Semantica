@@ -156,16 +156,7 @@ GRANT ALL PRIVILEGES ON DATABASE mydb TO psql;
 
 ### 3. Setup MindsDB
 
-**Option A: MindsDB Cloud (Recommended)**
-1. Sign up at [cloud.mindsdb.com](https://cloud.mindsdb.com)
-2. Note your email and password for configuration
-
-**Option B: Local MindsDB**
-```bash
-pip install mindsdb
-python -m mindsdb
-# MindsDB will start at http://127.0.0.1:47334
-```
+Refer [MindsDB Installation Docs](https://docs.mindsdb.com/setup/self-hosted/docker)
 
 ### 4. Backend Setup
 
@@ -188,7 +179,7 @@ nano .env
 **Required environment variables in `.env`:**
 ```env
 # MindsDB Configuration
-MINDSDB_URL=https://cloud.mindsdb.com  # or http://127.0.0.1:47334 for local
+MINDSDB_URL=http://127.0.0.1:47334
 
 # OpenAI API Key
 OPENAI_API_KEY=sk-...
@@ -506,6 +497,7 @@ This project is open source and available under the MIT License.
 - **PostgreSQL & pgvector** - For efficient vector storage and search
 - **FastAPI** - For the excellent Python web framework
 - **React** - For the powerful UI library
+- **goose** - For building the frontend of the app
 
 ---
 
