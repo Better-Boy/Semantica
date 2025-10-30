@@ -36,8 +36,8 @@ Semantica is an intelligent academic search and chat platform that enables resea
 
 ---
 
-Demo Video - [Semantica](https://youtu.be/8wIhcXm_7nk)
-Blog post - https://dev.to/better-boy/building-semantica-an-ai-powered-academic-search-platform-with-mindsdb-596n
+Demo Video - [Semantica](https://youtu.be/8wIhcXm_7nk)  
+Blog post - https://dev.to/better-boy/building-semantica-an-ai-powered-academic-search-platform-with-mindsdb-596n  
 Twitter Share - https://x.com/abhi2468it/status/1983481252658512303
 
 ## 🏗️ Architecture
